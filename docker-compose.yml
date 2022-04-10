@@ -28,8 +28,8 @@ services:
       - "3000:3000"
   nginx:
     build: ./nginx
-    ports:
-      - 80:80
+    expose:
+      - 80
     links:
       - server
       - client
