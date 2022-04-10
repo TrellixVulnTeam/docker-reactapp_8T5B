@@ -6,7 +6,7 @@ services:
     expose:
       - 3001
     volumes:
-      - ./back:/usr/src/app
+      - ./back:/usr/app
   client:
     container_name: client
     build: ./front
