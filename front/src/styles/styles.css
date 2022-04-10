@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Ubuntu:wght@500&display=swap');
+
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+.typed-text {
+  display: block;
+  color: #06A8FF;
+}
+
+
+body {
+  margin-top: 0;
+  padding: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: hand;
+}
+
+.arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #06A8FF;
+  border-right: 5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll 2s infinite;
+  cursor: hand;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1.1px;
+}
+
+.main {
+  overflow: hidden; /* Without it position sticky doesn't work */
+  background: url(../images/desk.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  padding: 30px;
+  height: 50px;
+  color: rgb(14, 202, 239);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.menu {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100vh;
+  list-style: none;
+}
+
+.menu .flex__li-item {
+  width: 125px;
+  height: 50px;
+  transition: background-position-x 0.9s linear;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Cuando la pantalla es mas grande de 768px */
+
+@media screen and (min-width:768px){
+  .text-box {
+    color: rgb(245, 236, 236);
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 250px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .text-box h1{
+      font-size: 75px;
+      line-height: 160px;
+  }
+}
+
+/* Cuando la pantalla es mas chica de 768px */
+
+@media screen and (max-width:768px){
+  .text-box h1{
+    font-size: 30px;
+    line-height: 100px;
+  }
+  .text-box{
+  color: rgb(245, 236, 236);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50%;
+  }
+  .intro-paragraph{
+    max-width: 60%;
+    text-align: center;
+    color:rgb(245, 236, 236);
+    margin-bottom: 4rem !important;
+
+  }
+  .buttons{
+    margin-top: 20px;
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    background-color: black;
+  }
+  
+}
+
+/* FIN de 768px */
+
+
+.img-skills {
+  width: 4em;
+  height: 5em;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.portfolio {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2980b9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.row-footer {
+  width: 100vh;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  margin-top: 20px !important;
+  align-items: center;
+}
+
+.field-2 {
+  margin-top: 10px !important;
+}
+
+.btn-primary{
+  background-color: transparent !important;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7 !important;
+}
+
+.button {
+  display: flex !important;
+  text-align: center !important; 
+}
+
+@keyframes line {
+  0% {
+    background-position-x: 400px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+      opacity: 1;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+        opacity: 1;
+  }
+  100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+.slick-slide {
+  height: 40% !important;
+}
+
+.section {
+  display: block;
+}

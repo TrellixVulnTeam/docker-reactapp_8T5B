@@ -1,0 +1,40 @@
+textarea {
+    resize: none;
+}
+
+.container_form {
+    /* background-color: red; */
+    padding: 8rem;
+}
+
+/* .form {
+     border: 2px solid red; 
+} */
+
+.footer {
+    box-shadow: rgba(24, 24, 177, 0.2) 0 7px 29px 0;
+    background: #02a9ca;
+    padding: 0rem;
+    margin: auto;
+    max-width: 70rem;
+    min-height: 40rem ;
+    text-align: right;
+    width: 95%;
+    border-radius: 10px;
+    margin: 5rem auto 10rem auto;
+    /* border: 5px solid green; */
+}
+
+.contact__form-label {
+    color: #667;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.heading-sec__mb-med {
+    margin-bottom: 4rem;
+}

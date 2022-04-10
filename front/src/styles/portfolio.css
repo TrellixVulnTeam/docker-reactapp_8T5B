@@ -1,0 +1,12 @@
+.heading-sec__mb-med {
+    margin-bottom: 5rem;
+}
+
+.projects {
+    /* border: 1px solid red; */
+    display: block;
+}
+
+.sec-pad {
+    padding: 12rem 0;
+}

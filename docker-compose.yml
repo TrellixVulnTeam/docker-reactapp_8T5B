@@ -1,0 +1,70 @@
+version: "3"
+services:
+  server:
+    container_name: server
+    build:
+      context: ./back/
+    command: /usr/app/node_modules/.bin/nodemon src/index.js
+    volumes:
+      - ./back/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3001:3001"
+    # env_file: ./back/.env # TODO - uncomment this to auto-load your .env file!
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+  client:
+    container_name: client
+    build:
+      context: ./front/
+    command: npm start
+    volumes:
+      - ./front/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    links:
+      - server
+      - client
+      - nginx-proxy
+      - letsencrypt
+    environment:
+      - VIRTUAL_HOST=manudev.site, www.manudev.site # web domain
+      - LETSENCRYPT_HOST=manudev.site, www.manudev.site # https available
+    restart: always
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    enviroment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+volumes:
+  certs:
+  html:
+  vhostd:
