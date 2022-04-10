@@ -8,8 +8,8 @@ services:
     volumes:
       - ./back/:/usr/app
       - /usr/app/node_modules
-    ports:
-      - "3001:3001"
+    expose:
+      - 3001
     # env_file: ./back/.env # TODO - uncomment this to auto-load your .env file!
     environment:
       - NODE_ENV=development
@@ -24,8 +24,8 @@ services:
       - /usr/app/node_modules
     depends_on:
       - server
-    ports:
-      - "3000:3000"
+    expose:
+      - 3000
   nginx:
     build: ./nginx
     expose:
