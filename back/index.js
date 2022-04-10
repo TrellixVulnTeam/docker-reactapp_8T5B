@@ -4,7 +4,7 @@ let cors = require('cors')
 let morgan = require('morgan')
 let serverRouter = require('./routes')
 dotenv.config();
-let PORT = process.env.PORT
+let PORT = 3001
 let app = express();
 
 // Middlewares //
