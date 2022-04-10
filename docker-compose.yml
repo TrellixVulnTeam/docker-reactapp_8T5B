@@ -1,31 +1,19 @@
-version: "3"
+version: "3.9"
 services:
   server:
     container_name: server
-    build:
-      context: ./back/
-    command: /usr/app/node_modules/.bin/nodemon src/index.js
-    volumes:
-      - ./back/:/usr/app
-      - /usr/app/node_modules
+    build: ./back
     expose:
       - 3001
-    # env_file: ./back/.env # TODO - uncomment this to auto-load your .env file!
-    environment:
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./back:/usr/src/app
   client:
     container_name: client
-    build:
-      context: ./front/
-    command: npm start
-    volumes:
-      - ./front/:/usr/app
-      - /usr/app/node_modules
-    depends_on:
-      - server
+    build: ./front
     expose:
       - 3000
+    volumes:
+      - ./front:/usr/src/app
   nginx:
     build: ./nginx
     expose:
@@ -35,9 +23,9 @@ services:
       - client
       - nginx-proxy
       - letsencrypt
-    environment:
-      - VIRTUAL_HOST=manudev.site, www.manudev.site # web domain
-      - LETSENCRYPT_HOST=manudev.site, www.manudev.site # https available
+    environment: 
+      - VIRTUAL_HOST=manudev.site, www.manudev.site
+      - LETSENCRYPT_HOST=manudev.site, www.manudev.site
     restart: always
 
   nginx-proxy:
@@ -47,23 +35,23 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-      - certs:/etc/nginx/certs:ro
-      - vhostd:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
+        - /var/run/docker.sock:/tmp/docker.sock:ro
+        - certs:/etc/nginx/certs:ro
+        - vhostd:/etc/nginx/vhost.d
+        - html:/usr/share/nginx/html
     labels:
-      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+        - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
 
   letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion
-    restart: always
-    environment:
-      - NGINX_PROXY_CONTAINER=nginx-proxy
-    volumes:
-      - certs:/etc/nginx/certs:rw
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - vhostd:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
+      image: jrcs/letsencrypt-nginx-proxy-companion
+      restart: always
+      environment:
+          - NGINX_PROXY_CONTAINER=nginx-proxy
+      volumes:
+        - certs:/etc/nginx/certs:rw
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+        - vhostd:/etc/nginx/vhost.d
+        - html:/usr/share/nginx/html
 volumes:
   certs:
   html:
