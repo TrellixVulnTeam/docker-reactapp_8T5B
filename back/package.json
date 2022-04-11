@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
-    "serve": "node index.js"
+    "serve": "node src/index.js"
   },
   "author": "Manuel Beledo",
   "license": "MIT",

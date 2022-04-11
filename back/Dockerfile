@@ -1,13 +1,11 @@
-FROM node:14-slim
+FROM node:14
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY . /app
 
 RUN npm install
 
-COPY . /app
+EXPOSE 5000
 
-EXPOSE 3001
-
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "serve" ]

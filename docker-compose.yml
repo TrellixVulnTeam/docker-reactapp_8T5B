@@ -3,15 +3,15 @@ services:
   server:
     container_name: server
     build: ./back
-    expose:
-      - 3001
+    ports:
+      - "5000:5000"
     volumes:
       - ./back:/usr/src/app
   client:
     container_name: client
     build: ./front
-    expose:
-      - 3000
+    ports:
+      - "3000:3000"
     volumes:
       - ./front:/usr/src/app
   nginx:
