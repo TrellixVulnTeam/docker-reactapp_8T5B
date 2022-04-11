@@ -3,20 +3,20 @@ services:
   server:
     container_name: server
     build: ./back
-    ports:
-      - 3001:3001
+    expose:
+      - 3001
     volumes:
       - ./back:/usr/src/app
   client:
     container_name: client
     build: ./front
-    ports:
-      - 3000:3000
+    expose:
+      - 3000
     volumes:
       - ./front:/usr/src/app
   nginx:
     build: ./nginx
-    expose:
+    ports:
       - 80
     links:
       - server

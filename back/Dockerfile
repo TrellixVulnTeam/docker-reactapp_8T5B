@@ -1,12 +1,13 @@
-FROM node:12.10.0-alpine
+FROM node:14-slim
 
-WORKDIR /usr/app
+WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci -qy
 
-COPY . .
+RUN npm install
+
+COPY . /app
 
 EXPOSE 3001
 
-CMD ["npm", "start"]
+CMD [ "npm", "start" ]

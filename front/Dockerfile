@@ -1,13 +1,17 @@
-FROM node:12.10.0
+FROM node:14
 
-WORKDIR /usr/app
+WORKDIR /app
 
-COPY package*.json ./
+COPY . /app
 
-RUN npm ci -qy
+ENV REACT_APP_REST=/api
 
-COPY . .
+RUN npm install
+
+RUN npm i -g serve
+
+RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]

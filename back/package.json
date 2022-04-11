@@ -1,12 +1,12 @@
 {
-  "name": "manuelbeledowebsite",
+  "name": "server",
   "version": "1.0.0",
   "description": "this is a website building with react",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
+    "dev": "nodemon src/index.js",
     "serve": "node index.js"
   },
   "author": "Manuel Beledo",
@@ -15,7 +15,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "firebase": "^8.10.0"
+    "firebase": "^8.10.0",
+    "npm": "^8.6.0"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

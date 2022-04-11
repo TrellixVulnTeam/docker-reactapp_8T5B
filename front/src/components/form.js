@@ -15,7 +15,7 @@ function FormBox() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(form);
-        fetch('http://localhost:3001/api', {
+        fetch('http://localhost:8000/api', {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(form), // data can be `string` or {object}!
             headers:{
