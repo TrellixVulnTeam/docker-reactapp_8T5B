@@ -18,7 +18,7 @@ function FormBox() {
         e.preventDefault();
         console.log(form);
         fetch('/api', {
-            method: 'POST', // or 'PUT'
+            method: 'GET', // or 'PUT'
             body: JSON.stringify(form), // data can be `string` or {object}!
             headers:{
               'Content-Type': 'application/json'
