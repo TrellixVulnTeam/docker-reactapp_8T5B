@@ -17,7 +17,7 @@ function FormBox() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(form);
-        fetch('https://www.manudev.site/api', {
+        fetch('/api', {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(form), // data can be `string` or {object}!
             headers:{
