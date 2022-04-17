@@ -1,6 +1,8 @@
 import { React, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
+import "../styles/about.css";
 import "../styles/form.css";
+
 
 function FormBox() {
     const [form, setForm] = useState({})

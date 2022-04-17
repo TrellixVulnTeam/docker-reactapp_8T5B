@@ -69,3 +69,9 @@ div {
 .main-footer__row-1 {
     order: 2;
 }
+
+@media screen and (max-width: 768px) {
+    .main-footer {
+        padding: 0rem;
+    }
+}
