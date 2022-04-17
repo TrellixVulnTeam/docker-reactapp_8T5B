@@ -8,7 +8,7 @@ router.get('/test', (req, res) => {
 })
 
 
-router.get('/', writeMessages)
+router.post('/', writeMessages)
 router.get('/messages', readMessages)
 
 
