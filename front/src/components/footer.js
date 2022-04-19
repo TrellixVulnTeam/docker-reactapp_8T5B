@@ -11,10 +11,10 @@ function Footer() {
               <span>Social</span>
             </h2>
             <div className="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://linkedin.com">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/manuel-beledo-89816892/">
                 <img className="main-footer__icon" src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png" alt="Manuel Beledo Linkedin Profile"/>
               </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com">
+              <a target="_blank" rel="noreferrer" href="https://github.com/manubeledo">
                 <img className="main-footer__icon" src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png" alt="Manuel Beledo Github Profile"/>
               </a>
               <a target="_blank" rel="noreferrer" href="https://twitter.com">

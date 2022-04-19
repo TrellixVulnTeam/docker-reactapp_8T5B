@@ -74,4 +74,28 @@ div {
     .main-footer {
         padding: 0rem;
     }
+    .main-footer__upper {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 0;
+        flex-direction: column;
+    }
+    
+    .main-footer__row-1 {
+        margin-top: 2rem;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-footer__row-2 {
+        width: 100%;
+        order: 1;
+        max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

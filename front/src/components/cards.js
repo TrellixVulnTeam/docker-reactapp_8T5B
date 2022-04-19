@@ -4,30 +4,30 @@ import '../styles/cards.css'
 import '../styles/portfolio.css'
 
 
-import image1 from '../assets/UberIMG.jpg'
 import image2 from '../assets/image2.jpg'
-import image3 from '../assets/usaclimate.jpg'
-
+import image4 from '../assets/image5.jpg'
+import image5 from '../assets/ubernew.jpg'
+import image6 from '../assets/weather.png'
 
 const cards = [
     {
         id: 1,
         title: 'Ecommerce',
-        image: image2,
-        url: 'http://google.com',
-        text: 'Site made using React, Tailwind and Mapbox'
+        image: image4,
+        url: 'https://proyect-ecommerce-manubeledo.herokuapp.com/api/index',
+        text: 'Backend with express, socket.io and Vanilla JS'
     },
     {
         id: 2,
         title: 'Uber Clone',
-        image: image1,
+        image: image5,
         url: 'https://uberappnextjs.herokuapp.com/',
         text: 'Site made using NextJS, Tailwind and Mapbox'
     },
     {
         id: 3,
         title: 'Weather API',
-        image: image3,
+        image: image6,
         url: 'https://serene-reef-95064.herokuapp.com/',
         text: 'Site made using Vanilla JS'
     },
