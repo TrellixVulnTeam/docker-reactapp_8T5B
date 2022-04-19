@@ -25,7 +25,7 @@ function Footer() {
           <div className="main-footer__row main-footer__row-2">
             <h2 className="heading heading-sm text-lt">Manuel Beledo</h2>
             <p className="main-footer__short-desc">
-              A Frontend focused Web Developer building the Frontend of Websites
+              A FullStack focused Web Developer building the Frontend and the Backend of Websites
               and Web Applications that leads to the success of the overall
               product
             </p>
