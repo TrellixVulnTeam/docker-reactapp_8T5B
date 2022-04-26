@@ -28,7 +28,7 @@ function About() {
                 learned over the years in <strong>Web Development</strong> so it
                 can help other people of the Dev Community. Feel free to Connect
                 or Follow me on my
-                <a className="linkedin" rel="noreferrer" href="https://linkedin.com/in/rammcodes" target="_blank">Linkedin</a>
+                <a className="linkedin" rel="noreferrer" href="https://www.linkedin.com/in/manuel-beledo-89816892/" target="_blank">Linkedin</a>
                 where I post useful content related to Web Development and
                 Programming
               </p>
