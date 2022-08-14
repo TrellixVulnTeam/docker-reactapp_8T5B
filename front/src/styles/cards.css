@@ -39,6 +39,7 @@
 
 .card-img-top {
   transition: all 0.5s ease-in-out;
+  height: 10rem;
 }
 
 .card-img-top:hover{
@@ -51,4 +52,9 @@
 
   animation: bounce;
   animation-duration: 2s;
+}
+
+p{
+  color: #0377B5 !important;
+  /* background-color: red; */
 }

@@ -11,7 +11,7 @@ return (
         </div>
         <div className="card-body text-light">
         <h4 className="card-title">{props.title}</h4>
-        <p className="class-text text-secondary">{props.text}</p>
+        <p className="class-text">{props.text}</p>
         <a href={props.url} className="btn btn-outline-secondary rounded-0" rel="noreferrer" target="_blank">Go to this website</a>
         </div>
     </div>

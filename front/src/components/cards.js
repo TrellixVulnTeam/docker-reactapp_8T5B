@@ -3,9 +3,9 @@ import Card from "./card";
 import '../styles/cards.css'
 import '../styles/portfolio.css'
 
-
+import image1 from '../assets/image5.jpg'
 import image2 from '../assets/image2.jpg'
-import image4 from '../assets/image5.jpg'
+import image4 from '../assets/uber-logo-TW.jpg'
 import image5 from '../assets/ubernew.jpg'
 import image6 from '../assets/weather.png'
 
@@ -13,23 +13,23 @@ const cards = [
     {
         id: 1,
         title: 'Ecommerce',
-        image: image4,
+        image: image1,
         url: 'https://proyect-ecommerce-manubeledo.herokuapp.com/api/index',
         text: 'Backend with express, socket.io and Vanilla JS'
     },
     {
         id: 2,
         title: 'Uber Clone',
-        image: image5,
+        image: image4,
         url: 'https://uberappnextjs.herokuapp.com/',
-        text: 'Site made using NextJS, Tailwind and Mapbox'
+        text: 'Made using NextJS, Tailwind and Mapbox API'
     },
     {
         id: 3,
         title: 'Weather API',
         image: image6,
         url: 'https://serene-reef-95064.herokuapp.com/',
-        text: 'Site made using Vanilla JS'
+        text: 'Site made using Vanilla JS and Openweather.org API' 
     },
     {
         id: 4,
