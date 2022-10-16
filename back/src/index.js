@@ -16,5 +16,8 @@ app.listen(PORT, () => {
     console.log(`Server working on: http://localhost:${PORT}`)
 })
 
+app.get('/', (req, res) => {
+    res.send('En la raiz del backend server')
+})
 
 
